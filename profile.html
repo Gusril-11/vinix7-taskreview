@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VINIX7 – Profile</title>
+  <link rel="stylesheet" href="profile.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div id="notif-upgrade" class="notif-upgrade">
+  Hore, Upgrade paket Berhasil!
+  <i class="fa-solid fa-check"></i>
+</div>
+
+<div id="notif-update" class="notif-update">
+  Hore, Data Berhasil Diubah!
+  <i class="fa-solid fa-check"></i>
+</div>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="user-profile">
+        <img src="https://i.pravatar.cc/80?img=12" alt="User profile photo" />
+        <div class="user-info">
+          <h3>Bagus Rilo Pambudi</h3>
+          <span>Peserta</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
+        <a href="mytask.html"><i class="fa-regular fa-circle-check"></i> My Tasks</a>
+        <a href="webdev.html"><i class="fa-regular fa-folder"></i> Web Dev & UI/UX</a>
+        <a href="english.html" ><i class="fa-regular fa-folder"></i> English For Profesional & AI</a>
+        <a href="softskill.html"><i class="fa-regular fa-folder"></i> SoftSkill</a>
+      </nav>
+
+      <a href="uploadtask.html" class="btn-submit-task">Upload New Task</a>
+
+      <nav class="sidebar-bottom-nav">
+        <a href="profile.html" class="nav-link active"><i class="fa-solid fa-user"></i> Profile</a>
+        <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN AREA -->
+    <div class="main-area">
+
+      <!-- HEADER -->
+      <header class="top-header">
+        <div class="logo">VINIX<span>7</span></div>
+
+        <div class="search-container">
+          <input type="search" placeholder="Search task......" aria-label="Search tasks" />
+        </div>
+
+        <div class="header-actions">
+          <a href="notification.html" class="btn-icon" aria-label="Notifications">
+  <i class="fa-regular fa-bell"></i>
+  <span class="notification-dot"></span>
+</a>
+          <img class="avatar" src="https://i.pravatar.cc/80?img=12" alt="User profile photo" />
+        </div>
+      </header>
+ 
+      <section class="profile-content">
+      <!-- TITLE -->
+      <section class="page-title">
+        <h1>Profile</h1>
+      </section>
+
+      <!-- PROFILE BOX -->
+      <section class="profile-box">
+
+        <div class="title-row">
+          <h2><i class="fa-regular fa-user"></i> Update Data Diri</h2>
+  <a href="editprofil.html" class="edit-btn">
+  <i class="fa-regular fa-pen-to-square"></i>
+</a>
+  </button>
+        </div>
+
+        <div class="profile-header">
+          <img src="https://i.pravatar.cc/80?img=12" class="profile-img">
+          <div>
+            <h3>Bagus Rilo Pambudi</h3>
+            <span>Peserta</span>
+            <br>
+            <a href="upgrade.html" class="upgrade">⭐ Upgrade Paket</a>
+          </div>
+        </div>
+
+        <!-- PERSONAL DATA -->
+        <!-- PERSONAL DATA -->
+<h3 class="sub-title">Personal Data</h3>
+
+<div class="form-grid">
+  <div class="form-group">
+    <label>Full Name</label>
+    <input type="text" value="Bagus Rilo Pambudi" readonly>
+  </div>
+
+  <div class="form-group">
+    <label>Intern ID</label>
+    <input type="text" value="VINIX-12345" readonly>
+  </div>
+
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" value="bagusrilopambudi40@gmail.com" readonly>
+  </div>
+
+  <div class="form-group">
+    <label>Phone Number</label>
+    <input type="text" value="083133479211" readonly>
+  </div>
+</div>
+
+<!-- WORK INFORMATION -->
+<h3 class="sub-title">Work Information</h3>
+
+<div class="form-grid">
+  <div class="form-group">
+    <label>Divisi</label>
+    <input type="text" value="Web Dev & UI/UX" readonly>
+  </div>
+
+  <div class="form-group">
+    <label>Mentor</label>
+    <input type="text" value="Gamendra" readonly>
+  </div>
+</div>
+
+      </section>
+      </section>
+    </div> <!-- penutup main-area -->
+
+  </div> <!-- penutup container -->
+ <script>
+  // ==== NOTIF UPGRADE ====
+  const notifUpgrade = document.getElementById("notif-upgrade");
+
+  if (localStorage.getItem("upgrade_success") === "true") {
+    notifUpgrade.style.display = "flex";
+    setTimeout(() => notifUpgrade.style.display = "none", 3000);
+    localStorage.removeItem("upgrade_success");
+  }
+
+  // ==== NOTIF UPDATE ====
+  const notifUpdate = document.getElementById("notif-update");
+
+  if (localStorage.getItem("update_success") === "true") {
+    notifUpdate.style.display = "flex";
+    setTimeout(() => notifUpdate.style.display = "none", 3000);
+    localStorage.removeItem("update_success");
+  }
+</script>
+</body>
+
+</html>

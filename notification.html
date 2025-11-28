@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VINIX7 - Dashboard</title>
+  <link rel="stylesheet" href="notification.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="user-profile">
+        <img src="https://i.pravatar.cc/80?img=12" alt="User profile photo" />
+        <div class="user-info">
+          <h3>Bagus Rilo Pambudi</h3>
+          <span>Peserta</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
+        <a href="mytask.html"><i class="fa-regular fa-circle-check"></i> My Tasks</a>
+        <a href="webdev.html"><i class="fa-regular fa-folder"></i> web Dev & UI/UX</a>
+        <a href="english.html"><i class="fa-regular fa-folder"></i> English For Profesional & AI</a>
+        <a href="softskill.html"><i class="fa-regular fa-folder"></i> SoftSkill</a>
+      </nav>
+      <a href="uploadtask.html" class="btn-submit-task">Upload New Task</a>
+      <nav class="sidebar-bottom-nav">
+        <a href="profile.html"><i class="fa-solid fa-user"></i> profile</a>
+        <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Area -->
+    <div class="main-area">
+      <!-- White header bar -->
+      <header class="top-header">
+        <div class="logo">VINIX<span>7</span></div>
+        <div class="search-container">
+          <input type="search" placeholder="Search task......" aria-label="Search tasks" />
+        </div>
+        <div class="header-actions">
+          <button class="btn-icon" aria-label="Notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notification-dot"></span>
+          </button>
+          <img class="avatar" src="https://i.pravatar.cc/80?img=12" alt="User profile photo" />
+        </div>
+      </header>
+
+      <!-- NOTIFICATION PAGE -->
+<section class="notification-page">
+
+  <h1 class="page-title">Notifikasi Taskreview</h1>
+
+  <div class="notif-card">
+    <div class="notif-item">
+      <div class="notif-icon notif-blue"><i class="fa-regular fa-comment"></i></div>
+      <div class="notif-text">
+        <p>Bayu left feedback on ‘UI Mockup’</p>
+        <span>2 hours ago</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="notif-card">
+    <div class="notif-item">
+      <div class="notif-icon notif-red"><i class="fa-regular fa-calendar-xmark"></i></div>
+      <div class="notif-text">
+        <p>Project ‘Alpha’ deadline is tomorrow</p>
+        <span>8 hours ago</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="notif-card">
+    <div class="notif-item">
+      <div class="notif-icon notif-green"><i class="fa-regular fa-circle-check"></i></div>
+      <div class="notif-text">
+        <p>Your submission for ‘Beta Feature Spec’ has been approved</p>
+        <span>1 day ago</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="notif-card">
+    <div class="notif-item">
+      <div class="notif-icon notif-yellow"><i class="fa-solid fa-users"></i></div>
+      <div class="notif-text">
+        <p>You have been added to the ‘Project akhir’</p>
+        <span>2 days ago</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+    </div>
+
+    <script>
+      // Simple tab switching
+      const tabs = document.querySelectorAll('.tab');
+      const panels = document.querySelectorAll('.tab-panel');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          panels.forEach(p => p.hidden = true);
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          document.getElementById(tab.getAttribute('aria-controls')).hidden = false;
+        });
+      });
+    </script>
+  </body>
+</html>

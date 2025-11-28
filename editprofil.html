@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VINIX7 – Profile</title>
+  <link rel="stylesheet" href="editprofil.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+      <div class="user-profile">
+        <img src="https://i.pravatar.cc/80?img=12" alt="User profile photo" />
+        <div class="user-info">
+          <h3>Bagus Rilo Pambudi</h3>
+          <span>Peserta</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
+        <a href="mytask.html"><i class="fa-regular fa-circle-check"></i> My Tasks</a>
+        <a href="webdev.html"><i class="fa-regular fa-folder"></i> Web Dev & UI/UX</a>
+        <a href="english.html"><i class="fa-regular fa-folder"></i> English For Profesional & AI</a>
+        <a href="softskill.html"><i class="fa-regular fa-folder"></i> SoftSkill</a>
+      </nav>
+
+      <a href="uploadtask.html" class="btn-submit-task">Submit New Task</a>
+
+      <nav class="sidebar-bottom-nav">
+        <a href="profile.html" class="active"><i class="fa-solid fa-user"></i> Profil</a>
+       <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+      </nav>
+  </aside>
+
+  <!-- MAIN AREA -->
+  <div class="main-area">
+
+    <!-- HEADER -->
+    <header class="top-header">
+      <div class="logo">VINIX<span>7</span></div>
+
+      <div class="search-container">
+        <input type="search" placeholder="Search task..." />
+      </div>
+
+      <div class="header-actions">
+        <a href="notification.html" class="btn-icon" aria-label="Notifications">
+  <i class="fa-regular fa-bell"></i>
+  <span class="notification-dot"></span>
+</a>
+        <img class="avatar" src="https://i.pravatar.cc/80?img=12" />
+      </div>
+    </header>
+
+
+    <!-- CONTENT -->
+    <section class="profile-content">
+
+      <h1 class="page-title">Profile</h1>
+
+      <section class="profile-box">
+
+        <div class="title-row">
+          <h2><i class="fa-regular fa-user"></i> Update Data Diri</h2>
+        </div>
+
+        <div class="profile-header">
+          <img src="https://i.pravatar.cc/80?img=12" class="profile-img">
+          <div>
+            <h3>Bagus Rilo Pambudi</h3>
+            <span>Peserta</span>
+          </div>
+        </div>
+
+        <!-- PERSONAL DATA -->
+        <h3 class="sub-title">Personal Data</h3>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" value="Bagus Rilo Pambudi">
+          </div>
+
+          <div class="form-group">
+            <label>Intern ID</label>
+            <input type="text" value="VINIX-12345">
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" value="bagusrilopambudi40@gmail.com">
+          </div>
+
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="text" value="083133479211">
+          </div>
+        </div>
+
+        <!-- WORK INFORMATION -->
+        <h3 class="sub-title">Work Information</h3>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Divisi</label>
+            <input type="text" value="Web Dev & UI/UX">
+          </div>
+
+          <div class="form-group">
+            <label>Mentor</label>
+            <input type="text" value="Gamendra">
+          </div>
+        </div>
+
+        <!-- UPDATE PASSWORD -->
+<div class="password-section">
+  <h3>Update Your Password</h3>
+
+  <div class="password-group">
+    <label>Current Password</label>
+    <input type="password" id="current-pass">
+    <i class="fa-regular fa-eye eye-toggle" onclick="togglePass('current-pass', this)"></i>
+  </div>
+
+  <div class="password-group">
+    <label>New Password</label>
+    <input type="password" id="new-pass">
+    <i class="fa-regular fa-eye eye-toggle" onclick="togglePass('new-pass', this)"></i>
+  </div>
+
+  <div class="password-group">
+    <label>Confirm Password</label>
+    <input type="password" id="confirm-pass">
+    <i class="fa-regular fa-eye eye-toggle" onclick="togglePass('confirm-pass', this)"></i>
+  </div>
+
+  <p class="password-rules">
+    Password must be at least 8 characters long and include a number and special character.
+  </p>
+
+  <a href="profile.html" class="update-btn">Update</a>
+</div>
+
+<script>
+function togglePass(id, icon) {
+  const field = document.getElementById(id);
+  if (field.type === "password") {
+    field.type = "text";
+    icon.classList.remove("fa-eye");
+    icon.classList.add("fa-eye-slash");
+  } else {
+    field.type = "password";
+    icon.classList.remove("fa-eye-slash");
+    icon.classList.add("fa-eye");
+  }
+}
+</script>
+
+<script>
+  document.querySelector('.update-btn').addEventListener('click', () => {
+    // simpan pesan notifikasi
+    localStorage.setItem("update_success", "true");
+
+    // pindah ke halaman profil
+    window.location.href = "profile.html";
+  });
+</script>
+</body>
+</html>

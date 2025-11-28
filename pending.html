@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halaman Revisi</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Your stylesheet -->
+  <link rel="stylesheet" href="pending.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="user-profile">
+        <img src="https://i.pravatar.cc/80?img=12" alt="User profile photo" />
+        <div class="user-info">
+          <h3>Bagus Rilo Pambudi</h3>
+          <span>Peserta</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
+        <a href="mytask.html" class="nav-link active"><i class="fa-regular fa-circle-check"></i> My Tasks</a>
+        <a href="webdev.html"><i class="fa-regular fa-folder"></i> web Dev & UI/UX</a>
+        <a href="english.html"><i class="fa-regular fa-folder"></i> English For Profesional & AI</a>
+        <a href="softskill.html"><i class="fa-regular fa-folder"></i> SoftSkill</a>
+      </nav>
+
+      <a href="uploadtask.html" class="btn-submit-task">Upload New Task</a>
+
+      <nav class="sidebar-bottom-nav">
+        <a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a>
+        <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN AREA -->
+    <div class="main-area">
+
+      <!-- Header -->
+      <header class="top-header">
+        <div class="logo">VINIX<span>7</span></div>
+
+        <div class="search-container">
+          <input type="search" placeholder="Search task......" aria-label="Search tasks" />
+        </div>
+
+        <div class="header-actions">
+          <a href="notification.html" class="btn-icon" aria-label="Notifications">
+  <i class="fa-regular fa-bell"></i>
+  <span class="notification-dot"></span>
+</a>
+          <img class="avatar" src="https://i.pravatar.cc/80?img=12" alt="User avatar" />
+        </div>
+      </header>
+
+      <!-- Page content -->
+      <div class="task-page">
+
+        <div class="content-wrap">
+
+          <div class="page-header">
+            <h1>Create marketing assets for Q4 campaign</h1>
+
+            <a href="viewalltasks.html" class="back-btn">
+              <i class="fas fa-arrow-left" aria-hidden="true"></i>
+              <span>Back to All Task</span>
+            </a>
+          </div>
+
+          <!-- Revision alert -->
+          <div class="revision-alert">
+            <i class="fa-solid fa-hourglass-half pencil-icon"></i>
+            <div class="revision-text">
+              <span class="title">Pending Review</span>
+              <p class="date">Submitted on November 01, 2025</p>
+            </div>
+          </div>
+
+          <!-- ====== MAIN 2-COLUMN LAYOUT ====== -->
+          <div class="task-container">
+
+            <!-- Task detail (left) -->
+            <div class="task-detail card">
+              <h2>Task Detail</h2>
+
+              <div class="row">
+                <p>
+                  <strong>Assigned To :</strong><br>
+                  Bagus Rilo Pambudi
+                </p>
+                <p>
+                  <strong>Deadline :</strong><br>
+                  02, November 2025
+                </p>
+              </div>
+
+              <div class="desc">
+                <strong>Description :</strong>
+                <p>
+                  The objective is to create a series of high-fidelity mockups for the
+                  upcoming Q3 marketing campaign. The designs should be modern, engaging,
+                  and aligned with our brand guidelines. The deliverables must include
+                  mockups for our website’s homepage banner, a promotional email, and
+                  three social media ad variants (for Instagram, Facebook, and LinkedIn).
+                  Please focus on a cohesive visual language across all assets.
+                </p>
+              </div>
+            </div>
+
+            <!-- RIGHT: Upload / File Box -->
+            <div class="upload-box card">
+              <h3 class="file-title">File</h3>
+              <div class="divider"></div>
+
+              <div class="file-item">
+                <div class="file-left">
+                  <i class="fa-solid fa-file-lines file-icon"></i>
+                  <span class="file-name">user-flow.pdf</span>
+                </div>
+                <a href="#" class="download-btn"><i class="fa-solid fa-download"></i></a>
+              </div>
+
+              <div class="file-item">
+                <div class="file-left">
+                  <i class="fa-solid fa-image file-icon"></i>
+                  <span class="file-name">user-flow.png</span>
+                </div>
+                <a href="#" class="download-btn"><i class="fa-solid fa-download"></i></a>
+              </div>
+            </div>
+
+          </div> <!-- END .task-container -->
+
+          <!-- Mentor feedback card (underneath) -->
+          <div class="feedback card">
+            <h2>Mentor’s Feedback</h2>
+
+            <div class="mentor">
+              <img src="https://i.pravatar.cc/80?img=33" alt="Mentor avatar" />
+              <div>
+                <h4>Gamendra</h4>
+                <span>Web Dev & UI/UX</span>
+              </div>
+            </div>
+
+            <p>
+              Good start, Olivia. The overall direction is strong, but the homepage banner feels
+              a bit crowded. Let’s try simplifying the typography and giving the main call-to-action
+              more breathing room. Also, please check the color contrast on the LinkedIn ad variant
+              for accessibility.
+            </p>
+          </div>
+
+        </div><!-- END .content-wrap -->
+
+      </div><!-- END .task-page -->
+
+    </div><!-- END .main-area -->
+
+  </div><!-- END .container -->
+
+<script>
+  document.querySelectorAll('.upload-btn, .back-btn, .btn-submit-task').forEach(el => {
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') el.click();
+    });
+  });
+</script>
+
+</body>
+</html>

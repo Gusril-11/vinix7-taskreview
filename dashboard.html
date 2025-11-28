@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VINIX7 - Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="user-profile">
+        <img src="https://i.pravatar.cc/80?img=12" alt="User profile photo" />
+        <div class="user-info">
+          <h3>Bagus Rilo Pambudi</h3>
+          <span>Peserta</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-link active"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
+        <a href="mytask.html"><i class="fa-regular fa-circle-check"></i> My Tasks</a>
+        <a href="webdev.html"><i class="fa-regular fa-folder"></i> web Dev & UI/UX</a>
+        <a href="english.html"><i class="fa-regular fa-folder"></i> English For Profesional & AI</a>
+        <a href="softskill.html"><i class="fa-regular fa-folder"></i> SoftSkill</a>
+      </nav>
+      <a href="uploadtask.html" class="btn-submit-task">Upload New Task</a>
+      <nav class="sidebar-bottom-nav">
+        <a href="profile.html"><i class="fa-solid fa-user"></i> profile</a>
+        <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Area -->
+    <div class="main-area">
+      <!-- White header bar -->
+      <header class="top-header">
+        <div class="logo">VINIX<span>7</span></div>
+        <div class="search-container">
+          <input type="search" placeholder="Search task......" aria-label="Search tasks" />
+        </div>
+        <div class="header-actions">
+          <a href="notification.html" class="btn-icon" aria-label="Notifications">
+  <i class="fa-regular fa-bell"></i>
+  <span class="notification-dot"></span>
+</a>
+          <img class="avatar" src="https://i.pravatar.cc/80?img=12" alt="User profile photo" />
+        </div>
+      </header>
+
+      <!-- Dashboard Content -->
+      <section class="dashboard">
+        <h1 class="dashboard-title">Dashboard</h1>
+        <p class="welcome-text">Welcome back, Bagus Rilo Pambudi!</p>
+
+        <!-- Cards -->
+        <section class="cards-container">
+          <article class="card">
+            <div class="card-header">
+              <span>Pending Review</span>
+              <div class="icon icon-yellow" aria-label="Pending Review">&#8987;</div>
+            </div>
+            <div class="card-number">5</div>
+          </article>
+          <article class="card">
+            <div class="card-header">
+              <span>Needs Revision</span>
+              <div class="icon icon-red" aria-label="Needs Revision">&#9998;</div>
+            </div>
+            <div class="card-number">2</div>
+          </article>
+          <article class="card">
+            <div class="card-header">
+              <span>Compleated</span>
+              <div class="icon icon-green" aria-label="Revision Approved">&#9989;</div>
+            </div>
+            <div class="card-number">9</div>
+          </article>
+          <article class="card card-total">
+            <div class="total-icon" aria-label="Total Assigned Task">&#128209;</div>
+            <div class="total-text">Total assigned Task</div>
+            <div class="total-number">25</div>
+          </article>
+        </section>
+
+        <!-- Progress Bar -->
+        <section class="progress-container" aria-label="Overall Progress">
+          <h2>Overall Progress <span class="progress-percent">75%</span></h2>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 75%;"></div>
+          </div>
+          <a href="viewalltasks.html" class="btn-view-all" role="button">View All Tasks <i class="fa-solid fa-arrow-right"></i></a>
+        </section>
+
+        <!-- Notifications and My Task tabs -->
+        <section class="notifications-tasks">
+          <div class="tabs">
+            <button class="tab active" type="button" aria-selected="true" aria-controls="notifications" id="tab-notifications">Recent Notifications</button>
+            <button class="tab" type="button" aria-selected="false" aria-controls="tasks" id="tab-tasks">My Task</button>
+          </div>
+
+          <div class="tab-panel active" role="tabpanel" id="notifications" aria-labelledby="tab-notifications">
+            <ul class="notifications-list">
+              <li>
+                <span class="notif-icon icon-blue"><i class="fa-regular fa-comment"></i></span>
+                <div>
+                  <p><strong>Bayu</strong> left feedback on ‘UI Mockup’</p>
+                  <time datetime="PT2H">2 hours ago</time>
+                </div>
+              </li>
+              <li>
+                <span class="notif-icon icon-red"><i class="fa-regular fa-calendar-xmark"></i></span>
+                <div>
+                  <p>Project ‘Alpha’ deadline is tomorrow</p>
+                  <time datetime="PT8H">8 hours ago</time>
+                </div>
+              </li>
+              <li>
+                <span class="notif-icon icon-green"><i class="fa-regular fa-circle-check"></i></span>
+                <div>
+                  <p>Your submission for ‘Beta Feature Spec’ has been approved</p>
+                  <time datetime="P1D">1 day ago</time>
+                </div>
+              </li>
+              <li>
+                <span class="notif-icon icon-yellow"><i class="fa-solid fa-users"></i></span>
+                <div>
+                  <p>You have been added to the ‘Project akhir’</p>
+                  <time datetime="P2D">2 day ago</time>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="tab-panel"
+            role="tabpanel"
+            id="tasks"
+            aria-labelledby="tab-tasks"
+            hidden
+          >
+            <p>My Task content here (can be populated later)</p>
+          </div>
+        </section>
+      </section>
+    </div>
+
+    <script>
+      // Simple tab switching
+      const tabs = document.querySelectorAll('.tab');
+      const panels = document.querySelectorAll('.tab-panel');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          panels.forEach(p => p.hidden = true);
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          document.getElementById(tab.getAttribute('aria-controls')).hidden = false;
+        });
+      });
+    </script>
+  </body>
+</html>

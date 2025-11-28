@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>course-overview</title>
+  <link rel="stylesheet" href="webdev.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="user-profile">
+        <img src="https://i.pravatar.cc/80?img=12" alt="User profile photo" />
+        <div class="user-info">
+          <h3>Bagus Rilo Pambudi</h3>
+          <span>Peserta</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
+        <a href="mytask.html"><i class="fa-regular fa-circle-check"></i> My Tasks</a>
+        <a href="#" class="active"><i class="fa-regular fa-folder"></i> web Dev & UI/UX</a>
+        <a href="english.html"><i class="fa-regular fa-folder"></i> English For Profesional & AI</a>
+        <a href="softskill.html"><i class="fa-regular fa-folder"></i> SoftSkill</a>
+      </nav>
+      <a href="uploadtask.html" class="btn-submit-task">Upload New Task</a>
+      <nav class="sidebar-bottom-nav">
+        <a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a>
+        <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN AREA -->
+    <div class="main-area">
+
+      <!-- HEADER -->
+      <header class="top-header">
+        <div class="logo">VINIX<span>7</span></div>
+
+        <div class="search-container">
+          <input type="search" placeholder="Search task......" aria-label="Search tasks" />
+        </div>
+
+        <div class="header-actions">
+          <a href="notification.html" class="btn-icon" aria-label="Notifications">
+  <i class="fa-regular fa-bell"></i>
+  <span class="notification-dot"></span>
+</a>
+          <img class="avatar" src="https://i.pravatar.cc/80?img=12" alt="User profile photo" />
+        </div>
+      </header>
+
+      <!-- MAIN CONTENT (scrollable) -->
+      <main class="main-content">
+
+        <h1 class="title">Web Dev & UI/UX</h1>
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="breadcrumb">
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="mytask.html">My Tasks</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="#" aria-current="page">Web Dev & UI/UX</a></li>
+          </ul>
+        </nav>
+
+        <!-- Modul 1 -->
+        <section class="modul">
+          <h2>Modul 1</h2>
+          <ul class="modul-content">
+            <li><a href="#"><i class="fa-solid fa-link"></i> link drive</a></li>
+            <li><a href="#"><i class="fa-solid fa-file-powerpoint"></i> PPT Webflow</a></li>
+          </ul>
+        </section>
+
+        <!-- Modul 2 -->
+        <section class="modul">
+          <h2>Modul 2</h2>
+          <ul class="modul-content">
+            <li><a href="#"><i class="fa-solid fa-file-pdf"></i> Materi Html</a></li>
+          </ul>
+        </section>
+
+        <!-- Modul 3 -->
+        <section class="modul">
+          <h2>Modul 3</h2>
+          <ul class="modul-content">
+            <li><a href="#"><i class="fa-solid fa-link"></i> Link Pengumpulan tugas</a></li>
+          </ul>
+        </section>
+
+        <!-- Modul 4 -->
+        <section class="modul">
+          <h2>Modul 4</h2>
+          <ul class="modul-content"></ul>
+        </section>
+
+        <!-- Modul 5 -->
+        <section class="modul">
+          <h2>Modul 5</h2>
+          <ul class="modul-content"></ul>
+        </section>
+
+        <!-- Modul 6 -->
+        <section class="modul">
+          <h2>Modul 6</h2>
+          <ul class="modul-content"></ul>
+        </section>
+
+        <!-- Modul 7 -->
+        <section class="modul">
+          <h2>Modul 7</h2>
+          <ul class="modul-content"></ul>
+        </section>
+
+      </main>
+
+    </div>
+  </div>
+</body>
+</html>

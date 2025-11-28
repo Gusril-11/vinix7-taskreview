@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Submit Task - VINIX7</title>
+   <link rel="stylesheet" href="uploadtask.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    /* CSS ada di bawah */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- User Profile -->
+    <div class="user-profile">
+      <img src="https://i.pravatar.cc/80?img=12" alt="User profile photo" />
+      <div class="user-info">
+        <h3>Bagus Rilo Pambudi</h3>
+        <span>Peserta</span>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="active"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
+      <a href="mytask.html"><i class="fa-regular fa-circle-check"></i> My Tasks</a>
+      <a href="webdev.html"><i class="fa-regular fa-folder"></i> Web Dev & UI/UX</a>
+      <a href="english.html"><i class="fa-regular fa-folder"></i> English For Profesional & AI</a>
+      <a href="softskill.html"><i class="fa-regular fa-folder"></i> SoftSkill</a>
+    </nav>
+
+    <!-- Bottom Links -->
+    <nav class="sidebar-bottom-nav">
+      <a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a>
+      <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </nav>
+
+  </aside>
+
+    <!-- Main Area -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="top-header">
+        <div class="logo">VINIX<span>7</span></div>
+        <div class="search-container">
+          <input type="search" placeholder="Search task......." aria-label="Search tasks" />
+        </div>
+        <div class="header-actions">
+          <a href="notification.html" class="btn-icon" aria-label="Notifications">
+  <i class="fa-regular fa-bell"></i>
+  <span class="notification-dot"></span>
+</a>
+          <img src="https://i.pravatar.cc/40?img=12" alt="User avatar" class="avatar" />
+        </div>
+      </header>
+
+      <!-- Submit Task Content -->
+      <section class="submit-task">
+        <h1>Submit Task</h1>
+
+        <!-- Upload File area -->
+        <div class="upload-file">
+          <h3>Upload File</h3>
+          <div class="drag-drop-area" tabindex="0">
+            <p class="drag-drop-text">Drag & drop files here</p>
+            <p class="drag-drop-subtext">or click to browse your files</p>
+            <input type="file" id="fileInput" multiple hidden />
+          </div>
+          <ul class="file-list">
+            <li>
+              <span class="file-icon"><i class="fa-regular fa-image"></i></span>
+              <span class="file-name">Profil-User.png</span>
+              <span class="file-size">2.4 MB</span>
+              <button class="file-remove" aria-label="Remove file">&times;</button>
+            </li>
+            <li>
+              <span class="file-icon"><i class="fa-regular fa-file-pdf"></i></span>
+              <span class="file-name">user-flow.pdf</span>
+              <span class="file-size">800 KB</span>
+              <button class="file-remove" aria-label="Remove file">&times;</button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Add Links -->
+       <!-- Kotak gabungan Add Links dan Add Notes -->
+  <div class="links-notes-container">
+    <div class="add-links">
+      <h3>Add Links</h3>
+      <input type="url" placeholder="https://......." aria-label="Add link" />
+    </div>
+    <div class="add-notes">
+  <h3>Add Notes</h3>
+
+  <div class="toolbar">
+  <button type="button" onclick="formatText('bold')"><i class="fa-solid fa-bold"></i></button>
+  <button type="button" onclick="formatText('italic')"><i class="fa-solid fa-italic"></i></button>
+  <button type="button" onclick="formatText('insertUnorderedList')"><i class="fa-solid fa-list-ul"></i></button>
+  <button type="button" onclick="formatText('insertOrderedList')"><i class="fa-solid fa-list-ol"></i></button>
+</div>
+<div id="editor" contenteditable="true" class="editor" 
+     placeholder="Describe your changes…"></div>
+
+        <!-- Submit Button -->
+       <div class="button-area">
+    <a href="viewalltasks.html" class="btn-submit">Submit</a>
+</div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Drag & drop area basic click to open file dialog
+    const dragDropArea = document.querySelector('.drag-drop-area');
+    const fileInput = document.getElementById('fileInput');
+
+    dragDropArea.addEventListener('click', () => fileInput.click());
+
+    fileInput.addEventListener('change', (e) => {
+      // Implement file listing or handling here if needed
+      alert(`${e.target.files.length} file(s) selected`);
+    });
+  </script>
+
+  <script>
+function formatText(command) {
+  document.execCommand(command, false, null);
+}
+</script>
+</body>
+</html>

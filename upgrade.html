@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VINIX7 – Upgrade Paket</title>
+  <link rel="stylesheet" href="upgrade.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="user-profile">
+      <img src="https://i.pravatar.cc/80?img=12" alt="User profile photo" />
+      <div class="user-info">
+        <h3>Bagus Rilo Pambudi</h3>
+        <span>Peserta</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="dashboard.html"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
+      <a href="mytask.html"><i class="fa-regular fa-circle-check"></i> My Tasks</a>
+      <a href="webdev.html"><i class="fa-regular fa-folder"></i> Web Dev & UI/UX</a>
+      <a href="english.html"><i class="fa-regular fa-folder"></i> English For Profesional & AI</a>
+      <a href="softskill.html"><i class="fa-regular fa-folder"></i> SoftSkill</a>
+    </nav>
+
+    <a href="uploadtask.html" class="btn-submit-task">Upload New Task</a>
+
+    <nav class="sidebar-bottom-nav">
+     <a href="profile.html" class="nav-link active"><i class="fa-solid fa-user"></i> Profile</a>
+      <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Main Area -->
+  <div class="main-area">
+
+    <!-- Header -->
+    <header class="top-header">
+      <div class="logo">VINIX<span>7</span></div>
+
+      <div class="search-container">
+        <input type="search" placeholder="Search task......" />
+      </div>
+
+      <div class="header-actions">
+        <a href="notification.html" class="btn-icon" aria-label="Notifications">
+  <i class="fa-regular fa-bell"></i>
+  <span class="notification-dot"></span>
+</a>
+        <img class="avatar" src="https://i.pravatar.cc/80?img=12" />
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT SECTION -->
+    <section class="upgrade-content">
+
+      <h1 class="page-title">Level Up Your Interns!</h1>
+      <p class="subtitle">Unlock epic tools, get VIP coaching, and crush those tasks like a boss!</p>
+
+      <!-- PACKAGE CARDS -->
+    <section class="package-section">
+  <div class="package-card selectable-card">
+    <h3>Paket VIP</h3>
+    <p class="desc">Optimized for scaling teams requiring enhanced processing and automation</p>
+    <h2 class="price">Rp 1.200.000</h2>
+
+    <ul>
+      <li><i class="fa-solid fa-check"></i> Access modul</li>
+      <li><i class="fa-solid fa-check"></i> AI feedback suggestions</li>
+      <li><i class="fa-solid fa-check"></i> Priority Support</li>
+      <li><i class="fa-solid fa-check"></i> All growth features</li>
+    </ul>
+  </div>
+
+  <div class="package-card selectable-card">
+    <h3>Paket Prestige Pro</h3>
+    <p class="desc">Optimized for scaling teams requiring enhanced processing and automation</p>
+    <h2 class="price">Rp 1.500.000</h2>
+
+    <ul>
+      <li><i class="fa-solid fa-check"></i> Access modul</li>
+      <li><i class="fa-solid fa-check"></i> AI feedback suggestions</li>
+      <li><i class="fa-solid fa-check"></i> Priority Support</li>
+      <li><i class="fa-solid fa-check"></i> All growth features</li>
+    </ul>
+  </div>
+
+  <div class="package-card selectable-card">
+    <h3>Paket Ultra Pro</h3>
+    <p class="desc">Optimized for scaling teams requiring enhanced processing and automation</p>
+    <h2 class="price">Rp 3.200.000</h2>
+
+    <ul>
+      <li><i class="fa-solid fa-check"></i> Access modul</li>
+      <li><i class="fa-solid fa-check"></i> AI feedback suggestions</li>
+      <li><i class="fa-solid fa-check"></i> Priority Support</li>
+      <li><i class="fa-solid fa-check"></i> All growth features</li>
+    </ul>
+  </div>
+</section>
+
+      <!-- PAYMENT METHODS -->
+      <section class="payment-box">
+  <h3>Pilih Metode Pembayaran</h3>
+
+  <div class="payment-option select-payment">
+    <div class="left">
+      <img src="image/bca.png" alt="Logo BCA">
+      <span>Bank BCA</span>
+    </div>
+    <input type="radio" name="payment">
+  </div>
+
+  <div class="payment-option select-payment">
+    <div class="left">
+      <img src="image/bri.png" alt="Logo BRI">
+      <span>Bank BRI</span>
+    </div>
+    <input type="radio" name="payment">
+  </div>
+
+  <div class="payment-option select-payment">
+    <div class="left">
+      <img src="image/mandiri.png" alt="Logo Mandiri">
+      <span>Bank Mandiri</span>
+    </div>
+    <input type="radio" name="payment">
+  </div>
+
+  <div class="payment-option select-payment">
+    <div class="left">
+      <i class="fa-solid fa-wallet wallet-icon"></i>
+      <span>Wallet</span>
+    </div>
+    <input type="radio" name="payment">
+  </div>
+
+  <button class="upgrade-btn">Upgrade</button>
+</section>
+
+    </section> <!-- END MAIN CONTENT -->
+
+  </div>
+
+</div>
+<script>
+  const cards = document.querySelectorAll('.selectable-card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      cards.forEach(c => c.classList.remove('active')); // reset semua
+      card.classList.add('active'); // aktifkan card yang diklik
+    });
+  });
+</script>
+
+<script>
+  const payOptions = document.querySelectorAll('.select-payment');
+
+  payOptions.forEach(option => {
+    option.addEventListener('click', () => {
+
+      // Hapus aktif di semua
+      payOptions.forEach(o => o.classList.remove('active'));
+
+      // Aktifkan yg dipilih
+      option.classList.add('active');
+
+      // Auto centang radio button
+      option.querySelector('input[type="radio"]').checked = true;
+    });
+  });
+</script>
+
+<script>
+  document.querySelector('.upgrade-btn').addEventListener('click', () => {
+    // simpan pesan notifikasi
+    localStorage.setItem("upgrade_success", "true");
+
+    // pindah ke halaman profil
+    window.location.href = "profile.html";
+  });
+</script>
+
+</body>
+</html>

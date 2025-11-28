@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VINIX7 - View All Tasks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="viewalltasks.css" />
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- User Profile -->
+    <div class="user-profile">
+      <img src="https://i.pravatar.cc/80?img=12" alt="User profile photo" />
+      <div class="user-info">
+        <h3>Bagus Rilo Pambudi</h3>
+        <span>Peserta</span>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="active"><i class="fa-solid fa-table-columns"></i> Dashboard</a>
+      <a href="mytask.html"><i class="fa-regular fa-circle-check"></i> My Tasks</a>
+      <a href="webdev.html"><i class="fa-regular fa-folder"></i> Web Dev & UI/UX</a>
+      <a href="english.html"><i class="fa-regular fa-folder"></i> English For Profesional & AI</a>
+      <a href="softskill.html"><i class="fa-regular fa-folder"></i> SoftSkill</a>
+    </nav>
+
+    <!-- Submit Button -->
+    <a href="uploadtask.html" class="btn-submit-task">Upload New Task</a>
+
+    <!-- Bottom Links -->
+    <nav class="sidebar-bottom-nav">
+      <a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a>
+      <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </nav>
+
+  </aside>
+
+
+
+  <!-- MAIN AREA -->
+  <div class="main-area">
+
+    <!-- Top Header -->
+    <header class="top-header">
+      <div class="logo">VINIX<span>7</span></div>
+
+      <div class="search-container">
+        <input type="search" placeholder="Search tasks…" aria-label="Search tasks" />
+      </div>
+
+      <div class="header-actions">
+        <a href="notification.html" class="btn-icon" aria-label="Notifications">
+  <i class="fa-regular fa-bell"></i>
+  <span class="notification-dot"></span>
+</a>
+        <img class="avatar" src="https://i.pravatar.cc/80?img=12" alt="User avatar" />
+      </div>
+    </header>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+  <section class="task-columns">
+
+    <!-- Column: Needs Revision -->
+    <div class="task-column">
+      <header>
+        <h2>Needs Revision</h2>
+        <span class="badge badge-red">2</span>
+      </header>
+
+      <a href="revisi.html" class="task-link">
+        <article class="task-card">
+          <h3>Fix responsive layout bugs on homepage</h3>
+          <p class="project">Project : Website Maintenance</p>
+          <div class="task-date">
+            <i class="fa-regular fa-calendar"></i>
+            <time datetime="2025-10-26">Oct 26, 2025</time>
+          </div>
+        </article>
+      </a>
+
+      <a href="revisi.html" class="task-link">
+        <article class="task-card">
+          <h3>Design the new onboarding flow</h3>
+          <p class="project">Project : Mobile App Redesign</p>
+          <div class="task-date">
+            <i class="fa-regular fa-calendar"></i>
+            <time datetime="2025-10-25">Oct 25, 2025</time>
+          </div>
+        </article>
+      </a>
+    </div>
+
+    <!-- Column: Pending Review -->
+    <div class="task-column">
+      <header>
+        <h2>Pending Review</h2>
+        <span class="badge badge-orange">2</span>
+      </header>
+
+      <a href="pending.html" class="task-link">
+        <article class="task-card">
+          <h3>Create marketing assets for Q4 campaign</h3>
+          <p class="project">Project : Marketing</p>
+          <div class="task-date">
+            <i class="fa-regular fa-calendar"></i>
+            <time datetime="2025-11-01">Nov 01, 2025</time>
+          </div>
+        </article>
+      </a>
+
+      <a href="pending.html" class="task-link">
+        <article class="task-card">
+          <h3>Develop the user authentication API</h3>
+          <p class="project">Project : Backend Services</p>
+          <div class="task-date">
+            <i class="fa-regular fa-calendar"></i>
+            <time datetime="2025-10-28">Oct 28, 2025</time>
+          </div>
+        </article>
+      </a>
+    </div>
+
+    <!-- Column: Completed -->
+    <div class="task-column">
+      <header>
+        <h2>Completed</h2>
+        <span class="badge badge-green">1</span>
+      </header>
+
+      <a href="revisi.html" class="task-link">
+        <article class="task-card">
+          <h3>Write documentation for the new feature</h3>
+          <p class="project">Project : Knowledge Base</p>
+          <div class="task-date">
+            <i class="fa-regular fa-calendar"></i>
+            <time datetime="2025-10-22">Oct 22, 2025</time>
+          </div>
+        </article>
+      </a>
+    </div>
+
+  </section>
+</main>
+
+
+  </div> <!-- END main-area -->
+
+</div> <!-- END container -->
+
+</body>
+</html>

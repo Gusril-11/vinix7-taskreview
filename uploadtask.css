@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --blue: #2e65f5;
+  --blue-light: #d6e4ff;
+  --gray-lightest: #f5f8ff;
+  --gray-light: #e6eaf3;
+  --gray-medium: #7b8a9e;
+  --gray-dark: #121212;
+  --yellow: #ffc658;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--gray-lightest);
+  color: var(--gray-dark);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* ======================================================
+   SIDEBAR (SUDAH DIGABUNG DARI KODE PERTAMA + KEDUA)
+====================================================== */
+
+.sidebar {
+  width: 250px;
+  background: white;
+  padding: 2rem 1.5rem;
+  border-right: 1px solid var(--gray-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.sidebar-nav {
+  margin-bottom: 1rem;
+}
+
+.sidebar{
+  justify-content: flex-start !important;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.user-profile img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.12);
+}
+
+.user-info h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.user-info span {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--gray-medium);
+}
+
+.sidebar-nav,
+.sidebar-bottom-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar-nav a,
+.sidebar-bottom-nav a {
+  text-decoration: none;
+  color: var(--gray-dark);
+  font-weight: 400;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.sidebar-nav a.active,
+.sidebar-nav a:hover,
+.sidebar-bottom-nav a:hover {
+  background-color: var(--blue-light);
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.sidebar-nav a i,
+.sidebar-bottom-nav a i {
+  font-size: 1.2rem;
+}
+.sidebar-bottom-nav {
+  margin-top: auto !important;
+}
+
+/* Submit new task button */
+.btn-submit-task {
+  background: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 2rem 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgb(46 101 245 / 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit-task:hover {
+  background-color: #244ecc;
+}
+
+/* ======================================================
+   MAIN CONTENT
+====================================================== */
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+  background: var(--gray-lightest);
+}
+
+/* Header */
+.top-header {
+  background-color: white;
+  border-bottom: 1px solid var(--gray-light);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--blue);
+}
+
+.logo span {
+  color: var(--yellow);
+}
+
+.search-container {
+  flex-grow: 1;
+  max-width: 400px;
+  margin: 0 1rem;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--gray-light);
+  transition: border-color 0.3s ease;
+}
+
+.search-container input:focus {
+  border-color: var(--blue);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-icon {
+  font-size: 1.4rem;
+  background: transparent;
+  border: none;
+  color: var(--gray-dark);
+  position: relative;
+  border-radius: 50%;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #f00b0b;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+/* ======================================================
+   SUBMIT TASK PAGE 
+====================================================== */
+
+.submit-task {
+  padding: 2rem 3rem;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.submit-task h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Upload box */
+.upload-file {
+  background-color: white;
+  border: 2px solid #3b64ff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.upload-file h3 {
+  margin: 0 0 1rem 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.drag-drop-area {
+  border: 2px dashed #3b64ff;
+  border-radius: 8px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 1rem;
+}
+
+.drag-drop-text {
+  font-size: 1rem;
+}
+
+.drag-drop-subtext {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 0.5rem;
+}
+
+/* File list */
+.file-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.file-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #d6e4ff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.file-icon {
+  font-size: 1.5rem;
+}
+
+.file-name {
+  flex-grow: 1;
+}
+
+.file-size {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.file-remove {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #666;
+  cursor: pointer;
+}
+
+/* Links */
+.add-links {
+  margin-bottom: 2rem;
+}
+
+.add-links h3 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.add-links input[type="url"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1.5px solid #c9d1d9;
+  transition: border-color 0.3s ease;
+}
+
+.add-links input[type="url"]:focus {
+  border-color: var(--blue);
+}
+
+/* Notes */
+.links-notes-container {
+  background-color: white;
+  border: 2px solid #3b64ff;
+  border-radius: 10px;
+  padding: 2rem 3rem;
+  box-shadow: 0 4px 12px rgba(59, 100, 255, 0.15);
+}
+
+.toolbar button {
+  background: #fff;
+  border: 1px solid #ccd5e0;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 6px;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.toolbar button:hover {
+  background: #eef2ff;
+}
+
+.editor {
+  width: 100%;
+  min-height: 110px;
+  max-height: 110px;
+  border-radius: 8px;
+  border: 1.5px solid #c9d1d9;
+  padding: 1rem;
+  font-size: 1rem;
+  resize: vertical;
+  overflow-y: auto;
+  margin-bottom: 30px;
+}
+
+.editor:empty:before {
+  content: attr(placeholder);
+  color: #9ca3af;
+}
+
+/* Submit button */
+.btn-submit {
+  background-color: #3b64ff;
+  color: white;
+  padding: 0.9rem 1.4rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: auto;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.button-area {
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.btn-submit:hover {
+  background-color: #274ecc;
+}
