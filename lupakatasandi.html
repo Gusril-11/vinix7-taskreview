@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lupa Kata Sandi</title>
+
+  <link rel="stylesheet" href="lupakatasandi.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    /* AGAR POSISI TIDAK NAIK SETELAH TOMBOL DIHAPUS */
+    .role-buttons {
+      height: 30px; /* sesuaikan dengan tinggi sebelumnya */
+    }
+  </style>
+</head>
+
+<body>
+  <main class="login">
+    <aside class="rectangle" role="complementary" aria-label="Branding section">
+      <div class="vinix" aria-label="VINIX7 Logo">
+        <span class="span">VINIX</span><span class="text-wrapper-13">7</span>
+      </div>
+      <h1 class="text-wrapper">TaskReview</h1>
+      <p class="div">Streaming Intern Development and Task Management</p>
+    </aside>
+
+    <section class="login-form-section" aria-labelledby="welcome-heading">
+      <h2 id="welcome-heading">Forgot Password</h2>
+      <p class="div">Enter your verified email to get the login link</p>
+      
+      <!-- ROLE BUTTONS DIKOSONGKAN TAPI TETAP ADA TEMPATNYA -->
+      <div class="role-buttons"></div>
+
+      <form class="login-form" action="dashboard.html" method="get" novalidate>
+
+        <!-- EMAIL -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <div class="password-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your Email"
+              required
+              autocomplete="email"
+            />
+          </div>
+        </div>
+        </div>
+        <button type="submit" class="login-btn">Send login to Email</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
