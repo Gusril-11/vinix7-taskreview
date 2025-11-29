@@ -165,6 +165,21 @@ label {
   cursor: pointer;
 }
 
+.forgot {
+  margin-top: 6px;
+  text-align: right;
+}
+
+.forgot-link {
+  font-size: 14px;
+  color: #2D79F6;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
 /* Submit button */
 button.login-btn {
   width: 100%;
@@ -184,20 +199,5 @@ button.login-btn:hover {
   background-color: #072940;
 }
 
-/* Signup Text */
-.signup-text {
-  margin-top: 18px;
-  font-size: 14px;
-  color: #a0a0a0;
-  text-align: center;
-}
 
-.signup-text a {
-  color: #1e90ff;
-  font-weight: 500;
-  text-decoration: none;
-}
 
-.signup-text a:hover {
-  text-decoration: underline;
-}
